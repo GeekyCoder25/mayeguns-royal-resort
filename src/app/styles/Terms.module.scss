@@ -1,0 +1,63 @@
+.termsHeaderBg {
+	background: #f2f7f6;
+	margin: 50px auto;
+	padding: 50px 5%;
+
+	.termsHeader {
+		max-width: 1440px;
+		margin: auto;
+		text-align: center;
+		font-family: 'objectivity-bold';
+		font-size: 1.5rem;
+	}
+}
+
+.termsContent {
+	margin-left: 3.125rem;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	max-width: 1440px;
+	margin: 0 auto 9.375rem;
+	padding: 0 5%;
+
+	> div {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+
+		h2 {
+			line-height: 1.8rem;
+		}
+
+		ol {
+			line-height: 1.8rem;
+			margin-left: 1.25rem;
+			color: #505050;
+
+			ol {
+				margin-left: 1.25rem;
+			}
+		}
+	}
+
+	> .legal {
+		h2 {
+			font-family: 'objectivity-bold';
+			text-align: left;
+		}
+
+		p {
+			font-size: 1rem;
+			line-height: 2rem;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.termsContent {
+		h2 {
+			text-align: center;
+		}
+	}
+}

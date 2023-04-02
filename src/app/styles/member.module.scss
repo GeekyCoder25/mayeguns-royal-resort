@@ -1,0 +1,86 @@
+.memberBg {
+	margin: 50px auto;
+}
+.member {
+	padding: 100px 0;
+	max-width: 1440px;
+	margin: auto;
+}
+.memberCardContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 50px;
+	margin-top: 30px;
+	padding: 0 5%;
+	> div:nth-child(1) {
+		background: #7cdcd7;
+	}
+	> div:nth-child(2) {
+		background: #1e1e1e;
+		color: #fff;
+		> button {
+			color: #000;
+			background: #fff;
+		}
+		p {
+			border-bottom: 1px solid #fff;
+		}
+	}
+	> div:nth-child(3) {
+		background: #e2b7e0;
+	}
+	> div {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 50px 30px;
+		border-radius: 10px;
+		max-width: 447px;
+
+		h2 {
+			font-family: 'objectivity-bold';
+		}
+		> button {
+			width: 266px;
+			height: 60px;
+			border-radius: 8px;
+			margin-top: 50px;
+			cursor: pointer;
+			background: #1e1e1e;
+			color: #fff;
+			font-size: 1.2rem;
+		}
+	}
+	p {
+		text-align: center;
+		width: 100%;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #1e1e1e;
+	}
+	> div > div {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		align-items: center;
+	}
+	.hr {
+		width: 100%;
+		hr {
+			color: #1e1e1e;
+		}
+	}
+	ul li:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	.more {
+		text-decoration: underline;
+		cursor: pointer;
+		background: transparent;
+		border: none;
+		font-family: inherit;
+		color: inherit;
+	}
+}

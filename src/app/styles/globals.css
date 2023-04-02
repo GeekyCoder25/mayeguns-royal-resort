@@ -1,0 +1,214 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'objectivity';
+	src: url(../assets/objectivity/Objective-Regular.otf);
+}
+@font-face {
+	font-family: 'objectivity-bold';
+	src: url(../assets/objectivity/Objective-Bold.otf);
+}
+@font-face {
+	font-family: 'aeonik';
+	src: url(../assets/aeonik/AeonikTRIAL-Regular.otf);
+}
+body {
+	background: #fafafa;
+	overflow-x: hidden;
+	font-family: objectivity;
+	color: #1e1e1e;
+}
+.max-page-width {
+	max-width: 1440px;
+	margin: auto;
+	padding: 0 5%;
+}
+a {
+	text-decoration: none;
+}
+header {
+	background: #f2f7f6;
+}
+.navBg {
+	background: #fafafa;
+}
+.nav {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	padding: 20px 0;
+}
+.nav img {
+	border-radius: 50%;
+	align-self: flex-start;
+	width: 5rem;
+	height: 5rem;
+}
+.nav li {
+	display: inline-block;
+}
+.nav a {
+	color: #000;
+	margin-right: 30px;
+	font-family: 'aeonik';
+}
+.nav .active {
+	color: #00a790;
+}
+.nav .navlinks {
+	display: flex;
+	width: 80%;
+	justify-content: space-between;
+	align-items: center;
+}
+.navlinks ul {
+	width: 90%;
+	text-align: center;
+}
+.navlinks li {
+	display: inline-block;
+}
+.nav .fas {
+	display: none;
+}
+.navlinks button {
+	margin-left: auto;
+}
+.button {
+	width: 276px;
+	height: 60px;
+	background: #00a790;
+	border-radius: 8px;
+	border: 1px solid;
+	cursor: pointer;
+	color: #fff;
+	font-size: 1.2rem;
+	font-family: inherit;
+}
+.reserve {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	text-align: center;
+	gap: 30px;
+	margin-bottom: 80px;
+	padding: 0 5%;
+	position: relative;
+}
+.reserve div {
+	background-image: url(/images/homeBg6.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -9;
+}
+.reserve h2 {
+	font-size: 2rem;
+	text-transform: capitalize;
+}
+.reserve p {
+	font-family: 'aenik';
+	font-size: 2rem;
+}
+.reserve a {
+	color: #fff;
+	border: 2px solid #ffffff;
+	border-radius: 8px;
+	padding: 19px 56px;
+}
+.member {
+	padding: 60px;
+	background: #f2f7f6;
+	text-align: center;
+	transform: translateY(80px);
+}
+.member > h2 {
+	font-family: 'objectivity-bold';
+	font-size: 2rem;
+}
+@media (max-width: 900px) {
+	html {
+		font-size: 14px;
+	}
+	.nav {
+		padding: 10px 5%;
+		box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+		background: #00a790;
+	}
+	.bodyUnscroll {
+		overflow: hidden;
+	}
+	.nav .navlinks {
+		position: fixed;
+		top: 0;
+		height: 100%;
+		right: -100%;
+		width: 60%;
+		background-color: #00a790;
+		z-index: 999;
+		padding-top: 30%;
+		transition: right 0.5s ease;
+		flex-direction: column;
+		justify-content: start;
+		gap: 30px;
+	}
+	.nav .navlinksShown {
+		right: 0;
+	}
+	.nav img {
+		width: 4rem;
+		height: 4rem;
+	}
+	.nav a {
+		color: #fff;
+	}
+	.nav .active {
+		color: #fff;
+		padding: 0 5% 5px;
+		border-bottom: 3px solid #fff;
+	}
+	.nav ul li {
+		display: block;
+		margin-bottom: 25px;
+	}
+	.navlinks button {
+		width: 80% !important;
+		max-width: 250px;
+		margin-left: 0;
+		text-align: center;
+	}
+	.nav .fas {
+		display: block;
+		color: #fff;
+		font-size: 1.5rem;
+	}
+	.barIcon {
+		margin-left: auto;
+	}
+	.xmarkIcon {
+		position: absolute;
+		top: 30px;
+		right: 25px;
+	}
+	.overlay {
+		display: flex;
+		top: 0;
+		left: 0;
+		justify-content: center;
+		align-items: center;
+		z-index: 9;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.7);
+		position: fixed;
+	}
+}

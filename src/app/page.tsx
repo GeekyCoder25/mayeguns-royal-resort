@@ -1,91 +1,70 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+/* eslint-disable @next/next/no-img-element */
+import styles from './styles/page.module.scss';
+import Button from './components/Button';
+import CustomHeader from './components/CustomHeader';
+import Member from './components/Member';
+import Reserve from './components/Reserve';
+import {exclusiveAdvantages} from './utils/dataStorage';
+import Why from './components/Why';
+import MainBg from './components/MainBg';
+import Video from './components/Video';
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	return (
+		<main className={styles.main}>
+			<MainBg
+				modal={true}
+				title="Experience the Magic of Mayegun Royal Resort"
+				content="Your Gateway to a World of Fun and Relaxation"
+			/>
+			<section>
+				<h2 className="max-page-width">Exclusive Advantages</h2>
+				<div className={styles.exclusiveBg}>
+					<div className={styles.exclusiveContent}>
+						{exclusiveAdvantages.map(item => (
+							<div key={item.title}>
+								<div className={styles.exclusive}>
+									<img src={`/images/${item.icon}.svg`} alt="" />
+									<div>
+										<h4>{item.title}</h4>
+										<p>{item.content}</p>
+									</div>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+			<section className={styles.about} id="about">
+				<Video styles={styles} />
+				<div>
+					<h2>About Mayegun Royal Resort</h2>
+					<p>
+						Mayegun Royal Resort Limited, Ijebu Ode is strategically inclined to
+						serve our distinguished clients/customer a highly private fitness
+						and wellness relaxation center in an ultra modern, an exclusive and
+						serene environment with various state of art facilities for both
+						health and social services.
+					</p>
+				</div>
+			</section>
+			<Why />
+			<Member />
+			<Reserve />
+			<CustomHeader
+				title="Subscribe to our Newsletter"
+				content="Never miss out on our most popular deals, news, promotions and events."
+			/>
+			<form className={styles.form}>
+				<input
+					type="email"
+					name="emial"
+					id="email"
+					placeholder="Enter your email here"
+					required
+				/>
+				<Button type="submit" title="Subscribe" />
+			</form>
+		</main>
+	);
 }

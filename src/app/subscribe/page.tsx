@@ -1,7 +1,7 @@
 'use client';
 import styles from '../styles/Subscribe.module.scss';
 import Button from '../components/Button';
-import {useState} from 'react';
+import {useRef, useState} from 'react';
 
 const Subscribe = () => {
 	const [formData, setformData] = useState({
@@ -18,9 +18,35 @@ const Subscribe = () => {
 		accName: '',
 		bankName: '',
 	});
-
+	const levelRef = useRef<any>('');
+	const handleLevelClick = (e: any) => {
+		//@ts-ignore
+		const levelButton = document.querySelectorAll(
+			`.${styles.subscribe} > div > span`
+		);
+		levelButton.forEach((element: any) =>
+			element.classList.remove(styles.levelButtonError)
+		);
+		setformData(prev => {
+			return {
+				...prev,
+				level: prev.level === e.target.textContent ? '' : e.target.textContent,
+			};
+		});
+	};
+	const handleSubmit = () => {
+		console.log(formData);
+		//@ts-ignore
+		const levelButton = document.querySelectorAll(
+			`.${styles.subscribe} > div > span`
+		);
+		levelRef.current.value.length <= 0 &&
+			levelButton.forEach((element: any) =>
+				element.classList.add(styles.levelButtonError)
+			);
+	};
 	return (
-		<main className={`${styles.subscribe} max-page-width `}>
+		<main className={styles.subscribe}>
 			<h2>Hi! Tell us all the things</h2>
 			<p>I&apos;m interested in...</p>
 			<div>
@@ -34,14 +60,7 @@ const Subscribe = () => {
 							  }
 							: undefined
 					}
-					onClick={() => {
-						setformData(prev => {
-							return {
-								...prev,
-								level: prev.level === 'Platinum' ? '' : 'Platinum',
-							};
-						});
-					}}
+					onClick={(e: any) => handleLevelClick(e)}
 				>
 					Platinum
 				</span>
@@ -55,14 +74,7 @@ const Subscribe = () => {
 							  }
 							: undefined
 					}
-					onClick={() => {
-						setformData(prev => {
-							return {
-								...prev,
-								level: prev.level === 'Diamond' ? '' : 'Diamond',
-							};
-						});
-					}}
+					onClick={(e: any) => handleLevelClick(e)}
 				>
 					Diamond
 				</span>
@@ -76,20 +88,26 @@ const Subscribe = () => {
 							  }
 							: undefined
 					}
-					onClick={() => {
-						setformData(prev => {
-							return {
-								...prev,
-								level: prev.level === 'Silver' ? '' : 'Silver',
-							};
-						});
-					}}
+					onClick={(e: any) => handleLevelClick(e)}
 				>
 					Silver
 				</span>
 			</div>
-			<form>
+			<form action="https://formsubmit.co/toyibe25@gmail.com" method="POST">
 				<div>
+					<input
+						type="text"
+						value={formData.level}
+						required
+						ref={levelRef}
+						className={styles.level}
+						onChange={(e: any) =>
+							setformData(prev => {
+								return {...prev, level: e.target.value};
+							})
+						}
+						// readOnly
+					/>
 					<label htmlFor="firstName">First Name</label>
 					<input
 						type="text"
@@ -254,11 +272,19 @@ const Subscribe = () => {
 						}}
 					/>
 				</div>
-				<Button
-					title="Subscribe"
-					type="submit"
-					onClick={() => console.log(formData)}
+				<input
+					type="hidden"
+					name="_cc"
+					value="Infomayegunroyalresort@gmail.com"
 				/>
+				<input
+					type="hidden"
+					name="_next"
+					value={'https://mayegunsoryalresort.com/congrats'}
+				/>
+				<input type="hidden" name="_subject" value="Mayegun Royal Resorts" />
+				<input type="hidden" name="_captcha" value="false" />
+				<Button title="Subscribe" type="submit" onClick={handleSubmit} />
 			</form>
 		</main>
 	);

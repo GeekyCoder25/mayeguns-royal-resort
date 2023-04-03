@@ -59,7 +59,10 @@ const Footer = () => {
 						reserved.
 					</h5>
 					<span>
-						<a href="https://www.instagram.com/mayegunroyalresortltd">
+						<a
+							href="https://www.instagram.com/mayegunroyalresortltd"
+							target="_blank"
+						>
 							<Image
 								width={30}
 								height={30}

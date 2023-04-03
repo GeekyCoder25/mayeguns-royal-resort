@@ -8,14 +8,29 @@ const MainBg = ({modal, title, content}: any) => {
 	const [imageIndex, setImageIndex] = useState(0);
 	const [formData] = useState(homeModalValues);
 	useEffect(() => {
-		setTimeout(() => {
-			imageIndex >= 5 ? setImageIndex(0) : setImageIndex(prev => prev + 1);
+		//@ts-ignore
+		const selectedImage = document.querySelectorAll(
+			`.${styles.imageBgContainer} > div > img`
+		);
+		const bgTimeout = setTimeout(() => {
+			imageIndex >= backgroundImagesUrl.length - 1
+				? setImageIndex(0)
+				: setImageIndex(prev => prev + 1);
+			selectedImage.forEach((element: any) => {
+				element.classList.remove(styles.img);
+			});
+			selectedImage[imageIndex].classList.add(styles.img);
 		}, 3500);
+		return () => {
+			clearTimeout(bgTimeout);
+		};
 	}, [imageIndex]);
+
 	const handlePicker = (e: any, item: any) => {
 		item.title === 'Guests'
 			? e.target.parentElement.firstChild.classList.add(styles.input)
 			: e.target.parentElement.firstChild.showPicker();
+		item.title === 'Guests' && e.target.parentElement.firstChild.focus();
 	};
 
 	const whatsappNo = '09043999871';
@@ -26,19 +41,10 @@ const MainBg = ({modal, title, content}: any) => {
 				modal ? styles.imageBgModalShow : undefined
 			}`}
 		>
-			{/* <img src="/images/homeBg2.jpg" alt="" />
-			<img src="/images/homeBg1.jpg" alt="" />
-			<img src="/images/homeBg3.jpg" alt="" />
-			<img src="/images/homeBg4.jpg" alt="" />
-			<img src="/images/homeBg6.jpg" alt="" />
-			<img src="/images/homeBg5.jpg" alt="" /> */}
 			<div>
-				<div
-					className={styles.imageBg}
-					style={{
-						backgroundImage: `url(/images/${backgroundImagesUrl[imageIndex]}.jpg)`,
-					}}
-				></div>
+				{backgroundImagesUrl.map(element => (
+					<img src={`/images/${element}.jpg`} alt="" key={element} />
+				))}
 			</div>
 			<div className={styles.imageBgText}>
 				<div>{title}</div>
@@ -56,6 +62,13 @@ const MainBg = ({modal, title, content}: any) => {
 								onChange={e => {
 									//@ts-ignore
 									item.value = e.target.value.split('-').reverse().join('/');
+								}}
+								onKeyUp={e => {
+									e.key === 'Enter' &&
+										//@ts-ignore
+										e.target.parentElement.firstChild.classList.remove(
+											styles.input
+										);
 								}}
 								onBlur={e => {
 									//@ts-ignore

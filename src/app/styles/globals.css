@@ -152,8 +152,8 @@ header {
 	gap: 30px;
 	border-radius: 8px;
 	text-align: center;
-	animation: popup 2s ease-in-out 0s forwards;
-	transform: translateY(500px);
+	/* animation: popup 2s ease-in-out 0s forwards;
+	transform: translateY(500px); */
 }
 @keyframes popup {
 	from {
@@ -173,6 +173,38 @@ header {
 	font-weight: 800;
 	font-size: 1.2rem;
 	cursor: pointer;
+}
+.congrats {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+	margin: 100px auto;
+}
+
+.congrats h1 {
+	font-family: 'objectivity-bold';
+	color: #00a790;
+}
+.congrats p {
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 32px;
+	max-width: 1000px;
+}
+.error {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	margin: 100px auto;
+	font-size: 2rem;
+	min-height: 40vh;
+}
+.error h1 {
+	font-family: 'objectivity-bold';
+	font-size: 5rem;
 }
 @media (max-width: 900px) {
 	html {
@@ -252,23 +284,34 @@ header {
 	}
 	.popup {
 		flex-direction: row;
+		justify-content: flex-start;
 		gap: 10px;
-		width: 90%;
-		right: 5%;
-		padding: 50px 10px;
+		width: 90vw;
+		left: 5%;
+		padding: 50px 15px;
 		height: 50px;
 		bottom: 5px;
 	}
+	.popup h2 {
+		font-size: 1rem;
+		line-height: normal;
+	}
 	.popup i {
-		position: sticky;
+		position: absolute;
 		background-color: #000;
 		border-radius: 50%;
 		padding: 5px;
 		color: #fff;
-		width: 25px;
-		height: 25px;
+		width: 30px;
+		height: 30px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		right: 10px;
+		top: 5px;
+	}
+	.popup .button {
+		width: 180px;
+		font-size: 1rem;
 	}
 }

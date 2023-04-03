@@ -41,13 +41,6 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.37.0.tgz"
   integrity sha512-x5vzdtOOGgFVDCUs81QRB2+liax8rFg3+7hqM+QhBG0/G3F1ZsoYl97UrqgHgQ9KKT7G6c4V+aTUCgu/n22v1A==
 
-"@googlemaps/js-api-loader@^1.7.0":
-  version "1.15.1"
-  resolved "https://registry.npmjs.org/@googlemaps/js-api-loader/-/js-api-loader-1.15.1.tgz"
-  integrity sha512-AsnEgNsB7S/VdrHGEQUaUM2e5tmjFGKBAfzR/AqO8O7TPq/jQGvoRw5liPBw4EMF38RDsHmKDV89q/X+qiUREQ==
-  dependencies:
-    fast-deep-equal "^3.1.3"
-
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.8.tgz"
@@ -66,11 +59,6 @@
   version "1.2.1"
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
-
-"@mapbox/point-geometry@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/@mapbox/point-geometry/-/point-geometry-0.1.0.tgz"
-  integrity sha512-6j56HdLTwWGO0fJPlrZtdU/B13q8Uwmo18Ck2GnGgN9PCFyKTZ3UbXeEdRFh18i9XQ92eH2VdtpJHpBD3aripQ==
 
 "@next/env@13.2.4":
   version "13.2.4"
@@ -194,12 +182,10 @@
   dependencies:
     tslib "^2.4.0"
 
-"@types/google-map-react@^2.1.7":
-  version "2.1.7"
-  resolved "https://registry.npmjs.org/@types/google-map-react/-/google-map-react-2.1.7.tgz"
-  integrity sha512-7pquMUU20kVwbfEV91iAWXjApSkqoODkfUwTSmJpU9Tgd+ecX+MrQnplCqrSqKrPF1VjfvyWnDEicdoSd0G5qA==
-  dependencies:
-    "@types/react" "*"
+"@types/aos@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@types/aos/-/aos-3.0.4.tgz#fd0dce430f18d118081aaced2c79c30617b15818"
+  integrity sha512-mna6Jd6bdK1NpwarLopGvXOgUoCfj0470IwLxuVOFDElTGI0JTd7xSGQ0AjbAEnHErC/b3fA9t2uB3IXVKmckA==
 
 "@types/json5@^0.0.29":
   version "0.0.29"
@@ -910,11 +896,6 @@ esutils@^2.0.2:
   resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
-eventemitter3@^4.0.4:
-  version "4.0.7"
-  resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
-  integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
-
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
@@ -1126,16 +1107,6 @@ globrex@^0.1.2:
   version "0.1.2"
   resolved "https://registry.npmjs.org/globrex/-/globrex-0.1.2.tgz"
   integrity sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==
-
-google-map-react@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.npmjs.org/google-map-react/-/google-map-react-2.2.0.tgz"
-  integrity sha512-UPiTwR3qNKJJizURXTuCbnBr8kLtLsiikj/KH1UTLGhadnU6fT+CE3CLw1lzZwk5zZIduQQODyIcEwNInECmUg==
-  dependencies:
-    "@googlemaps/js-api-loader" "^1.7.0"
-    "@mapbox/point-geometry" "^0.1.0"
-    eventemitter3 "^4.0.4"
-    prop-types "^15.7.2"
 
 gopd@^1.0.1:
   version "1.0.1"
@@ -1763,7 +1734,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==

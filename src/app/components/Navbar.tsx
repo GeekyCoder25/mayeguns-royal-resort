@@ -16,6 +16,9 @@ const whiteBgNav = [
 	'/contact',
 	'/become-a-member',
 	'/privacy-policy',
+	'/legal-policies',
+	'/subscribe',
+	'/congrats',
 	'/terms&conditions',
 ];
 const navLinks = [

@@ -37,39 +37,46 @@ export const gridData = [
 		title: 'World class chef',
 		content:
 			'With Our World class chefs, come enjoy genuine well prepared, tasty and quality cuisines!',
+		aos: 'fade-right',
 	},
 	{
 		id: 2,
 		title: 'Exquisite Room Facilities',
 		content: 'Our Rooms are top notch, well furnished and presidential',
+		aos: 'fade-left',
 	},
 	{
 		id: 3,
 		title: 'State of the art Health Facilities',
 		content:
 			'With our world class experts both in health and social services, a secured, refreshingness, rejuvenated wellness and fitness geared to maximum productivity is guaranteed.',
+		aos: 'fade-right',
 	},
 	{
 		id: 4,
 		title: 'Ultramodern Spa Facilities',
 		content: 'A total renewal of freshness is certain.',
+		aos: 'fade-up',
 	},
 	{
 		id: 5,
 		title: 'Standard Swimming Pool',
 		content:
 			'Our swimming pool is standard with constant and consistent treatment. Enjoy life here.',
+		aos: 'fade-left',
 	},
 	{
 		id: 6,
 		title: 'Fitness and wellness Gym facilities',
 		content:
 			'Our fitness and wellness gym facilities are classic with state of the art equipments',
+		aos: 'fade-right',
 	},
 	{
 		id: 7,
 		title: 'Casino',
 		content: 'Wow… A redefined fun!!!',
+		aos: 'fade-up',
 	},
 ];
 

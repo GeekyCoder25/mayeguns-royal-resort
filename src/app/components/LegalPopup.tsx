@@ -4,12 +4,14 @@ import Button from './Button';
 import {useRouter, usePathname} from 'next/navigation';
 
 const LegalPopup = () => {
-	const [showModal, setShowModal] = useState(true);
+	const [showModal, setShowModal] = useState(false);
 	const pathname = usePathname();
 	const navigation = useRouter();
 	useEffect(() => {
 		//@ts-ignore
-		localStorage.getItem('popUpClosed') && setShowModal(false);
+		localStorage.getItem('popUpClosed')
+			? setShowModal(false)
+			: setShowModal(true);
 	}, [pathname]);
 	return showModal ? (
 		<aside className="popup">

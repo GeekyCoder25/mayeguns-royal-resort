@@ -1,5 +1,5 @@
 'use client';
-import React, {useRef, useState} from 'react';
+import {useRef, useState} from 'react';
 
 const Video = ({styles}: any) => {
 	const [playButton, setPlayButton] = useState(true);

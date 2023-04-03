@@ -280,7 +280,7 @@ const Subscribe = () => {
 				<input
 					type="hidden"
 					name="_next"
-					value={'https://mayegunsoryalresort.com/congrats'}
+					value={'https://mayegunsroyalresort.com/congrats'}
 				/>
 				<input type="hidden" name="_subject" value="Mayegun Royal Resorts" />
 				<input type="hidden" name="_captcha" value="false" />

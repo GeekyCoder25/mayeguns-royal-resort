@@ -282,7 +282,11 @@ const Subscribe = () => {
 					name="_next"
 					value={'https://mayegunsroyalresort.com/congrats'}
 				/>
-				<input type="hidden" name="_subject" value="Mayegun Royal Resorts" />
+				<input
+					type="hidden"
+					name="_subject"
+					value="Mayegun Royal Resorts Member Reserve"
+				/>
 				<input type="hidden" name="_captcha" value="false" />
 				<Button title="Subscribe" type="submit" onClick={handleSubmit} />
 			</form>

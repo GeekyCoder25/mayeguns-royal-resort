@@ -35,7 +35,27 @@ const Conatct = () => {
 					about the hotel, we will be happy to answer your questions.
 				</h3>
 			</section>
-			<form className={styles.form}>
+			<form
+				className={styles.form}
+				action="https://formsubmit.co/toyibe25@gmail.com"
+				method="POST"
+			>
+				<input
+					type="hidden"
+					name="_cc"
+					value="Infomayegunroyalresort@gmail.com"
+				/>
+				<input
+					type="hidden"
+					name="_next"
+					value={'https://mayegunsroyalresort.com'}
+				/>
+				<input
+					type="hidden"
+					name="_subject"
+					value="Mayegun Royal Resorts Customer Support"
+				/>
+				<input type="hidden" name="_captcha" value="false" />
 				<label htmlFor="name">Your Name</label>
 				<input
 					type="text"

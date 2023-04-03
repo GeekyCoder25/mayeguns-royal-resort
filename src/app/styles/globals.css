@@ -18,7 +18,7 @@
 body {
 	background: #fafafa;
 	overflow-x: hidden;
-	font-family: objectivity;
+	font-family: 'objectivity';
 	color: #1e1e1e;
 }
 .max-page-width {
@@ -135,6 +135,45 @@ header {
 	font-family: 'objectivity-bold';
 	font-size: 2rem;
 }
+
+.popup {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background-color: #fff;
+	width: 500px;
+	height: 350px;
+	box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px;
+	gap: 30px;
+	border-radius: 8px;
+	text-align: center;
+	animation: popup 2s ease-in-out 0s forwards;
+	transform: translateY(500px);
+}
+@keyframes popup {
+	from {
+		transform: translateY(500px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+.popup h2 {
+	line-height: 2rem;
+}
+.popup i {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	font-weight: 800;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
 @media (max-width: 900px) {
 	html {
 		font-size: 14px;
@@ -210,5 +249,26 @@ header {
 		height: 100vh;
 		background-color: rgba(0, 0, 0, 0.7);
 		position: fixed;
+	}
+	.popup {
+		flex-direction: row;
+		gap: 10px;
+		width: 90%;
+		right: 5%;
+		padding: 50px 10px;
+		height: 50px;
+		bottom: 5px;
+	}
+	.popup i {
+		position: sticky;
+		background-color: #000;
+		border-radius: 50%;
+		padding: 5px;
+		color: #fff;
+		width: 25px;
+		height: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }

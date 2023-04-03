@@ -42,7 +42,7 @@ const Navbar = ({metadata}: Metadata) => {
 			setTimeout(() => {
 				// @ts-ignore
 				document.querySelector('#about').scrollIntoView({behavior: 'smooth'});
-			}, 300);
+			}, 500);
 		} else {
 			e.preventDefault();
 			// @ts-ignore

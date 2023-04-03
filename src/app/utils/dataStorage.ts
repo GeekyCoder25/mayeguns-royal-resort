@@ -1,7 +1,7 @@
 export const homeModalValues = [
-	{title: 'Arrival', value: new Date(), icon: 'calendar'},
-	{title: 'Exit', value: new Date(), icon: 'calendar'},
-	{title: 'Guests', value: 3, icon: 'chevron-down'},
+	{title: 'Arrival', value: '', icon: 'calendar'},
+	{title: 'Departure', value: '', icon: 'calendar'},
+	{title: 'Guests', value: '', icon: 'chevron-down'},
 ];
 export const backgroundImagesUrl = [
 	'homeBg1',
@@ -96,7 +96,7 @@ export const membershipLevel = [
 		content: [
 			'Access to all health and other state of arts facilities',
 			'Under this category you are an esteemed and exclusive member, access to a private lounge in the resort',
-			'5 days accessibility to our prestigious and elegant room,maximum stay is 5 days only monthly',
+			'5 days accessibility to our prestigious and elegant room, maximum stay is 5 days only monthly',
 			'Free food and drinks, free pick up from a distance of 120km maximum e.g. from Lagos or Ibadan, same as drop off',
 			'Once in a month appointment with our doctor within the 5days maximum stay.',
 			'Freshly personalised and branded house wear, foot wear, towels for the maximum stay of 5 days in the resort, access to our gym and spa, salon, telephone line signage for you as a member, with many more incentives',
@@ -110,7 +110,7 @@ export const membershipLevel = [
 		content: [
 			'Access to swimming pool areas ONLY',
 			'Under this category you are an esteemed and exclusive member, access to a private lounge in the resort',
-			'5 days accessibility to our prestigious and elegant room,maximum stay is 5 days only monthly',
+			'5 days accessibility to our prestigious and elegant room, maximum stay is 5 days only monthly',
 			'Free food and drinks as it pleases, free pick up from a distance of 120km maximum e.g. from Lagos or Ibadan, same as drop off',
 		],
 	},
@@ -248,8 +248,8 @@ export const policy = [
 			'Data Privacy Officer',
 			'RWFQ+95 120101, Ijebu Ode, Ogun State',
 			'Ijebu-Ode 120101',
-			'E:  dataprivacy@mayegun.com',
-			'Effective Date of Privacy Policy:  3 January 2023',
+			'E:  Infomayegunroyalresort@gmail.com',
+			'Effective Date of Privacy Policy:  1st of April 2023',
 			'Governing Laws & Jurisdiction - The user and the Company agree that all matters relating to and/or any disputes arising out of the user’s access to, or use of the Mayegun Royal Resorts Site shall be governed by and interpreted and construed and enforced exclusively in accordance with the substantive domestic laws of the Republic of Singapore, without regard to the conflicts of law principles thereof',
 		],
 	},

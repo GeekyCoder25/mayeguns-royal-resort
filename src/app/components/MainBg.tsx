@@ -64,7 +64,8 @@ const MainBg = ({modal, title, content}: any) => {
 									item.value = e.target.value.split('-').reverse().join('/');
 								}}
 								onKeyUp={e => {
-									e.key === 'Enter' &&
+									item.title === 'Guests' &&
+										e.key === 'Enter' &&
 										//@ts-ignore
 										e.target.parentElement.firstChild.classList.remove(
 											styles.input

@@ -206,6 +206,22 @@ header {
 	font-family: 'objectivity-bold';
 	font-size: 5rem;
 }
+.test {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin: 100px auto;
+	padding: 10%;
+}
+.four {
+	visibility: hidden;
+}
+.test .last {
+	display: block;
+	-webkit-appreance: textfield;
+	-moz-appearance: textfield;
+	min-height: 1.2rem;
+}
 @media (max-width: 900px) {
 	html {
 		font-size: 14px;

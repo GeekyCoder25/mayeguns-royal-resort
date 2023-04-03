@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import React from 'react';
 import styles from '../styles/Footer.module.scss';
 import Link from 'next/link';
 import {usePathname, useRouter} from 'next/navigation';
@@ -22,6 +21,7 @@ const Footer = () => {
 			document.querySelector('#about').scrollIntoView({behavior: 'smooth'});
 		}
 	};
+	const whatsappNo = '09043999871';
 	return (
 		<footer className={styles.footer}>
 			<section>
@@ -40,13 +40,16 @@ const Footer = () => {
 					</div>
 					<div>
 						<h3>Legal</h3>
-						<Link href="/legal-policies">Legal Policies</Link>
-						<Link href="/terms&conditions">Terms & Conditions </Link>
+						<Link href="/legal-policies">Legal & Policies</Link>
+						{/* <Link href="/terms&conditions">Terms & Conditions </Link> */}
 					</div>
 					<div>
 						<h3>Contact</h3>
-						<a href="mailto:info@mayegunroyalresort.com">
-							info@mayegunroyalresort.com
+						<a href="mailto:Infomayegunroyalresort@gmail.com">
+							Infomayegunroyalresort@gmail.com
+						</a>
+						<a href={`https://wa.me/${whatsappNo}`} target="_blank">
+							Contact on Whatsapp
 						</a>
 					</div>
 				</section>

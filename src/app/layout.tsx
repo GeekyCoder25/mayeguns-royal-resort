@@ -5,6 +5,7 @@ import React from 'react';
 import Footer from './components/Footer';
 // import AOS from 'aos';
 import 'aos/dist/aos.css';
+import LegalPopup from './components/LegalPopup';
 
 export const metadata = {
 	title: 'Mayegun Royal Resort',
@@ -18,6 +19,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 				<Navbar metadata={metadata} />
 				{children}
 				<Footer />
+				<LegalPopup />
 			</body>
 		</html>
 	);

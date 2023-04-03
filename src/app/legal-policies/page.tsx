@@ -1,7 +1,13 @@
+'use client';
+import {useEffect} from 'react';
 import styles from '../styles/Terms.module.scss';
 import {policy} from '../utils/dataStorage';
 
 const Privacy = () => {
+	useEffect(() => {
+		//@ts-ignore
+		localStorage.setItem('popUpClosed', true);
+	}, []);
 	return (
 		<section className={styles.Terms}>
 			<section className={styles.termsHeaderBg}>

@@ -75,11 +75,14 @@
 		.gridContainer {
 			grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr));
 			grid-auto-rows: auto;
-			> div div {
-				width: 95%;
-			}
-			.img {
-				max-width: 100%;
+			> div {
+				div {
+					width: 95%;
+				}
+				.img {
+					max-width: 100%;
+					align-self: flex-start;
+				}
 			}
 			img {
 				max-width: 100%;

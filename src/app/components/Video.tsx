@@ -20,9 +20,11 @@ const Video = ({styles}: any) => {
 			)}
 			<video
 				controls
+				autoPlay
 				ref={videoRef}
 				onPause={() => setPlayButton(true)}
 				onPlay={() => setPlayButton(false)}
+				muted
 			>
 				<source src="/vid/video.mp4" type="video/mp4" />
 			</video>

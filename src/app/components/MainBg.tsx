@@ -7,6 +7,7 @@ import Button from './Button';
 const MainBg = ({modal, title, content}: any) => {
 	const [imageIndex, setImageIndex] = useState(0);
 	const [formData] = useState(homeModalValues);
+	const [checkArray, setcheckArray] = useState<string[]>([]);
 	useEffect(() => {
 		//@ts-ignore
 		const selectedImage = document.querySelectorAll(
@@ -36,6 +37,9 @@ const MainBg = ({modal, title, content}: any) => {
 	};
 
 	const whatsappNo = '+2349043999871';
+	useEffect(() => {
+		console.log(checkArray);
+	}, [checkArray]);
 
 	return (
 		<section
@@ -74,10 +78,14 @@ const MainBg = ({modal, title, content}: any) => {
 										);
 								}}
 								onBlur={e => {
-									//@ts-ignore
-									e.target.parentElement.firstChild.classList.remove(
-										styles.input
-									);
+									item.title === 'Guests' &&
+										//@ts-ignore
+										e.target.parentElement.firstChild.classList.remove(
+											styles.input
+										);
+									e.target.value !== '' &&
+										!checkArray.includes(item.title) &&
+										setcheckArray(prev => [...prev, item.title]);
 								}}
 							/>
 							<div>
@@ -102,9 +110,11 @@ const MainBg = ({modal, title, content}: any) => {
 						title="Reserve"
 						height={80}
 						onClick={() => {
-							console.log(formData);
-							//@ts-ignore
-							window.open(`https://wa.me/${whatsappNo}`);
+							checkArray.length >= 3 &&
+								//@ts-ignore
+								window.open(
+									`https://wa.me/${whatsappNo}?text=Hi%2C%20I'm%20interested%in%20making%20payment%20for%20reservation%20between%20${homeModalValues[0].value}%20to%20${homeModalValues[1].value}%20for%20${homeModalValues[2].value}guests`
+								);
 						}}
 					/>
 				</div>

@@ -32,10 +32,10 @@ const MainBg = ({modal, title, content}: any) => {
 					styles.input
 			  )
 			: e.target.parentElement.parentElement.firstChild.showPicker();
-		item.title === 'Guests' && e.target.parentElement.firstChild.focus();
+		e.target.parentElement.firstChild.focus();
 	};
 
-	const whatsappNo = '09043999871';
+	const whatsappNo = '+2349043999871';
 
 	return (
 		<section

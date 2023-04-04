@@ -2,7 +2,7 @@
 import Button from '../components/Button';
 
 const Congrats = () => {
-	const whatsappNo = '09043999871';
+	const whatsappNo = '+2349043999871';
 	return (
 		<div className="congrats max-page-width">
 			<h1>CONGRATULATIONS!!!</h1>

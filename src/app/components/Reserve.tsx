@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Reserve = () => {
-	const whatsappNo = '09043999871';
+	const whatsappNo = '+2349043999871';
 	return (
 		<section className="reserve">
 			<div></div>

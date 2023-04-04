@@ -21,7 +21,7 @@ const Footer = () => {
 			document.querySelector('#about').scrollIntoView({behavior: 'smooth'});
 		}
 	};
-	const whatsappNo = '09043999871';
+	const whatsappNo = '+2349043999871';
 	return (
 		<footer className={styles.footer}>
 			<section>

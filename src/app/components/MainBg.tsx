@@ -109,7 +109,6 @@ const MainBg = ({modal, title, content}: any) => {
 							title="Reserve"
 							height={80}
 							onClick={() => {
-								console.log(guestsNumer);
 								checkArray.length >= 3
 									? //@ts-ignore
 									  window.open(

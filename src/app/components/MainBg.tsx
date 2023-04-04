@@ -28,8 +28,10 @@ const MainBg = ({modal, title, content}: any) => {
 
 	const handlePicker = (e: any, item: any) => {
 		item.title === 'Guests'
-			? e.target.parentElement.firstChild.classList.add(styles.input)
-			: e.target.parentElement.firstChild.showPicker();
+			? e.target.parentElement.parentElement.firstChild.classList.add(
+					styles.input
+			  )
+			: e.target.parentElement.parentElement.firstChild.showPicker();
 		e.target.parentElement.firstChild.focus();
 	};
 
@@ -86,11 +88,13 @@ const MainBg = ({modal, title, content}: any) => {
 										.replaceAll('/', '-')}
 								</span>
 							</div>
-							<img
-								src={`/images/${item.icon}.svg`}
-								alt=""
-								onClick={e => handlePicker(e, item)}
-							/>
+							<label htmlFor={item.title}>
+								<img
+									src={`/images/${item.icon}.svg`}
+									alt=""
+									onClick={e => handlePicker(e, item)}
+								/>
+							</label>
 						</div>
 					))}
 					<Button

@@ -38,9 +38,6 @@ const MainBg = ({modal, title, content}: any) => {
 	};
 
 	const whatsappNo = '+2349043999871';
-	useEffect(() => {
-		console.log(checkArray);
-	}, [checkArray]);
 
 	return (
 		<section
@@ -71,7 +68,7 @@ const MainBg = ({modal, title, content}: any) => {
 									}
 									onChange={e => {
 										setErroMesaage(false);
-										item.value = e.target.value;
+										item.value = e.target.value.split('-').reverse().join('-');
 									}}
 									onKeyUp={e => {
 										item.title === 'Guests' &&

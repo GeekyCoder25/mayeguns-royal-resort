@@ -79,6 +79,11 @@
 	gap: 30px;
 	max-width: 90%;
 	flex-wrap: wrap;
+	.errorText {
+		color: red;
+		width: 100%;
+		text-align: center;
+	}
 }
 .imageBgModal > div {
 	border: 1px solid #000;

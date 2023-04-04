@@ -8,6 +8,7 @@ const MainBg = ({modal, title, content}: any) => {
 	const [imageIndex, setImageIndex] = useState(0);
 	const [formData] = useState(homeModalValues);
 	const [checkArray, setcheckArray] = useState<string[]>([]);
+	const [ErroMesaage, setErroMesaage] = useState(false);
 	useEffect(() => {
 		//@ts-ignore
 		const selectedImage = document.querySelectorAll(
@@ -57,67 +58,74 @@ const MainBg = ({modal, title, content}: any) => {
 				<p>{content}</p>
 			</div>
 			{modal && (
-				<div className={styles.imageBgModal}>
-					{homeModalValues.map(item => (
-						<div key={item.title}>
-							<input
-								type={item.title === 'Guests' ? 'number' : 'date'}
-								name={item.title}
-								id={item.title}
-								defaultValue={item.title === 'Guests' ? item.value : undefined}
-								onChange={e => {
-									//@ts-ignore
-									item.value = e.target.value.split('-').reverse().join('/');
-								}}
-								onKeyUp={e => {
-									item.title === 'Guests' &&
-										e.key === 'Enter' &&
-										//@ts-ignore
-										e.target.parentElement.firstChild.classList.remove(
-											styles.input
-										);
-								}}
-								onBlur={e => {
-									item.title === 'Guests' &&
-										//@ts-ignore
-										e.target.parentElement.firstChild.classList.remove(
-											styles.input
-										);
-									e.target.value !== '' &&
-										!checkArray.includes(item.title) &&
-										setcheckArray(prev => [...prev, item.title]);
-								}}
-							/>
-							<div>
-								<p>{item.title}</p>
-								<span>
-									{item.value
-										//@ts-ignore
-										.replaceAll('/', '-')}
-								</span>
-							</div>
-							<label htmlFor={item.title}>
-								<img
-									src={`/images/${item.icon}.svg`}
-									alt=""
-									onClick={e => handlePicker(e, item)}
+				<>
+					<div className={styles.imageBgModal}>
+						{homeModalValues.map(item => (
+							<div key={item.title}>
+								<input
+									type={item.title === 'Guests' ? 'number' : 'date'}
+									name={item.title}
+									id={item.title}
+									defaultValue={
+										item.title === 'Guests' ? item.value : undefined
+									}
+									onChange={e => {
+										setErroMesaage(false);
+										item.value = e.target.value;
+									}}
+									onKeyUp={e => {
+										item.title === 'Guests' &&
+											e.key === 'Enter' &&
+											//@ts-ignore
+											e.target.parentElement.firstChild.classList.remove(
+												styles.input
+											);
+									}}
+									onBlur={e => {
+										setErroMesaage(false);
+										item.title === 'Guests' &&
+											//@ts-ignore
+											e.target.parentElement.firstChild.classList.remove(
+												styles.input
+											);
+										e.target.value !== '' &&
+											!checkArray.includes(item.title) &&
+											setcheckArray(prev => [...prev, item.title]);
+									}}
 								/>
-							</label>
-						</div>
-					))}
-					<Button
-						type="button"
-						title="Reserve"
-						height={80}
-						onClick={() => {
-							checkArray.length >= 3 &&
-								//@ts-ignore
-								window.open(
-									`https://wa.me/${whatsappNo}?text=Hi%2C%20I'm%20interested%in%20making%20payment%20for%20reservation%20between%20${homeModalValues[0].value}%20to%20${homeModalValues[1].value}%20for%20${homeModalValues[2].value}guests`
-								);
-						}}
-					/>
-				</div>
+								<div>
+									<p>{item.title}</p>
+									<span>{item.value}</span>
+								</div>
+								<label htmlFor={item.title}>
+									<img
+										src={`/images/${item.icon}.svg`}
+										alt=""
+										onClick={e => handlePicker(e, item)}
+									/>
+								</label>
+							</div>
+						))}
+						<Button
+							type="button"
+							title="Reserve"
+							height={80}
+							onClick={() => {
+								checkArray.length >= 3
+									? //@ts-ignore
+									  window.open(
+											`https://wa.me/${whatsappNo}?text=Hi%2C%20I'm%20interested%20in%20making%20payment%20for%20reservation%20between%20${homeModalValues[0].value}%20to%20${homeModalValues[1].value}%20for%20${homeModalValues[2].value}%20guests`
+									  )
+									: setErroMesaage(true);
+							}}
+						/>
+						{ErroMesaage && (
+							<span className={styles.errorText}>
+								Input all required fields first
+							</span>
+						)}
+					</div>
+				</>
 			)}
 		</section>
 	);

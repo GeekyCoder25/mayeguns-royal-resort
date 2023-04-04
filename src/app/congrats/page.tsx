@@ -5,7 +5,7 @@ const Congrats = () => {
 	const whatsappNo = '09043999871';
 	return (
 		<div className="congrats max-page-width">
-			<h1>Congratulations</h1>
+			<h1>CONGRATULATIONS!!!</h1>
 			<p>
 				Thank you for subscribing to Mayegun Royal Resorts, kindly proceed to
 				our whatsapp platform to make payment via one of our representative

@@ -297,5 +297,3 @@ export const policy = [
 		],
 	},
 ];
-
-export const referCodeLength = 6;

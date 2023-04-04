@@ -2,24 +2,24 @@
 import styles from '../styles/Subscribe.module.scss';
 import Button from '../components/Button';
 import {useRef, useState} from 'react';
-import {referCodeLength} from '../utils/dataStorage';
 
 const Subscribe = () => {
 	const [formData, setformData] = useState({
-		level: '',
-		firstName: '',
-		lastName: '',
-		email: '',
-		phoneNo: '',
-		age: '',
-		occupation: '',
-		homeAddress: '',
-		officeAddress: '',
-		accNo: '',
-		accName: '',
-		bankName: '',
-		referCode: '',
+		LEVEL: '',
+		FIRST_NAME: '',
+		LAST_NAME: '',
+		EMAIL: '',
+		PHONE_NO: '',
+		AGE: '',
+		OCCUPATION: '',
+		HOME_ADDRESS: '',
+		OFFICE_ADDRESS: '',
+		ACC_NO: '',
+		ACC_NAME: '',
+		BANK_NAME: '',
+		REFER_CODE: '',
 	});
+	const referCodeLength = 6;
 	const referCode = Array.from(Array(20), () =>
 		Math.floor(Math.random() * 36).toString(36)
 	)
@@ -38,8 +38,8 @@ const Subscribe = () => {
 		setformData(prev => {
 			return {
 				...prev,
-				level: prev.level === e.target.textContent ? '' : e.target.textContent,
-				referCode,
+				LEVEL: prev.LEVEL === e.target.textContent ? '' : e.target.textContent,
+				REFER_CODE: referCode,
 			};
 		});
 	};
@@ -61,7 +61,7 @@ const Subscribe = () => {
 			<div>
 				<span
 					style={
-						formData.level === 'Platinum'
+						formData.LEVEL === 'Platinum'
 							? {
 									backgroundColor: '#00a790',
 									borderColor: '#00a790',
@@ -75,7 +75,7 @@ const Subscribe = () => {
 				</span>
 				<span
 					style={
-						formData.level === 'Diamond'
+						formData.LEVEL === 'Diamond'
 							? {
 									backgroundColor: 'blue',
 									borderColor: 'blue',
@@ -89,7 +89,7 @@ const Subscribe = () => {
 				</span>
 				<span
 					style={
-						formData.level === 'Silver'
+						formData.LEVEL === 'Silver'
 							? {
 									backgroundColor: 'silver',
 									borderColor: 'silver',
@@ -106,8 +106,8 @@ const Subscribe = () => {
 				<div>
 					<input
 						type="text"
-						name="level"
-						value={formData.level}
+						name="LEVEL"
+						value={formData.LEVEL}
 						required
 						ref={levelRef}
 						className={styles.level}
@@ -120,7 +120,7 @@ const Subscribe = () => {
 					<label htmlFor="firstName">First Name</label>
 					<input
 						type="text"
-						name="firstName"
+						name="FIRST_NAME"
 						id="firstName"
 						placeholder="Enter your first name here"
 						required
@@ -135,7 +135,7 @@ const Subscribe = () => {
 					<label htmlFor="lastName">Surname</label>
 					<input
 						type="text"
-						name="lastName"
+						name="LAST_NAME"
 						id="lastName"
 						placeholder="Enter your surname here"
 						required
@@ -150,7 +150,7 @@ const Subscribe = () => {
 					<label htmlFor="email">Email Address</label>
 					<input
 						type="email"
-						name="email"
+						name="EMAIL"
 						id="email"
 						placeholder="Enter your email address here"
 						required
@@ -165,7 +165,7 @@ const Subscribe = () => {
 					<label htmlFor="tel">Phone No</label>
 					<input
 						type="tel"
-						name="tel"
+						name="PHONE_NO"
 						id="tel"
 						placeholder="Enter your phone number"
 						required
@@ -180,7 +180,7 @@ const Subscribe = () => {
 					<label htmlFor="age">Age</label>
 					<input
 						type="number"
-						name="age"
+						name="AGE"
 						id="age"
 						placeholder="Enter your age here"
 						required
@@ -195,7 +195,7 @@ const Subscribe = () => {
 					<label htmlFor="occupation">Occupation</label>
 					<input
 						type="text"
-						name="occupation"
+						name="OCCUPATION"
 						id="occupation"
 						placeholder="Enter your occupation here"
 						required
@@ -210,7 +210,7 @@ const Subscribe = () => {
 					<label htmlFor="homeAddress">Home Address</label>
 					<input
 						type="text"
-						name="homeAddress"
+						name="HOME_ADDRESS"
 						id="homeAddress"
 						placeholder="Enter your home address here"
 						required
@@ -225,7 +225,7 @@ const Subscribe = () => {
 					<label htmlFor="officeAddress">Office Address</label>
 					<input
 						type="text"
-						name="officeAddress"
+						name="OFFICE_ADDRESS"
 						id="officeAddress"
 						placeholder="Enter your office address here"
 						required
@@ -240,7 +240,7 @@ const Subscribe = () => {
 					<label htmlFor="accNo">Account Number</label>
 					<input
 						type="text"
-						name="accNo"
+						name="ACC_NO"
 						id="accNo"
 						placeholder="Enter your account number here"
 						required
@@ -255,7 +255,7 @@ const Subscribe = () => {
 					<label htmlFor="accName">Account Name</label>
 					<input
 						type="text"
-						name="accName"
+						name="ACC_NAME"
 						id="accName"
 						placeholder="Enter your account name here"
 						required
@@ -270,7 +270,7 @@ const Subscribe = () => {
 					<label htmlFor="bankName">Bank Name</label>
 					<input
 						type="text"
-						name="bankName"
+						name="BANK_NAME"
 						id="bankName"
 						placeholder="Enter your bank name here"
 						required
@@ -280,11 +280,12 @@ const Subscribe = () => {
 							});
 						}}
 					/>
+					{/* <label htmlFor="referCode">Refer Code</label> */}
 					<input
 						type="text"
-						name="referCode"
+						name="REFER_CODE"
 						id="referCode"
-						value={formData.referCode}
+						value={formData.REFER_CODE}
 						readOnly
 					/>
 				</div>

@@ -185,7 +185,6 @@ header {
 .congrats h1 {
 	font-family: 'objectivity-bold';
 	color: #00a790;
-	text-transform: uppercase;
 }
 .congrats p {
 	font-size: 1.5rem;

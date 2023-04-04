@@ -73,6 +73,9 @@
 				background: transparent;
 				padding: 0.125rem 0.9375rem;
 			}
+			input[name='referCode'] {
+				display: none;
+			}
 		}
 		div:nth-child(3),
 		div:nth-child(4),

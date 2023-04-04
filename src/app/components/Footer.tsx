@@ -45,8 +45,8 @@ const Footer = () => {
 					</div>
 					<div>
 						<h3>Contact</h3>
-						<a href="mailto:Infomayegunroyalresort@gmail.com">
-							Infomayegunroyalresort@gmail.com
+						<a href="mailto:Infomayegunsresort@gmail.com">
+							Infomayegunsresort@gmail.com
 						</a>
 						<a href={`https://wa.me/${whatsappNo}`} target="_blank">
 							Contact on Whatsapp

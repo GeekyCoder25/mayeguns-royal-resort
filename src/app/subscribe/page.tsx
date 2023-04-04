@@ -2,6 +2,7 @@
 import styles from '../styles/Subscribe.module.scss';
 import Button from '../components/Button';
 import {useRef, useState} from 'react';
+import {referCodeLength} from '../utils/dataStorage';
 
 const Subscribe = () => {
 	const [formData, setformData] = useState({
@@ -17,7 +18,14 @@ const Subscribe = () => {
 		accNo: '',
 		accName: '',
 		bankName: '',
+		referCode: '',
 	});
+	const referCode = Array.from(Array(20), () =>
+		Math.floor(Math.random() * 36).toString(36)
+	)
+		.join('')
+		.slice(0, referCodeLength)
+		.toUpperCase();
 	const levelRef = useRef<any>('');
 	const handleLevelClick = (e: any) => {
 		//@ts-ignore
@@ -31,6 +39,7 @@ const Subscribe = () => {
 			return {
 				...prev,
 				level: prev.level === e.target.textContent ? '' : e.target.textContent,
+				referCode,
 			};
 		});
 	};
@@ -97,6 +106,7 @@ const Subscribe = () => {
 				<div>
 					<input
 						type="text"
+						name="level"
 						value={formData.level}
 						required
 						ref={levelRef}
@@ -106,7 +116,6 @@ const Subscribe = () => {
 								return {...prev, level: e.target.value};
 							})
 						}
-						// readOnly
 					/>
 					<label htmlFor="firstName">First Name</label>
 					<input
@@ -271,12 +280,15 @@ const Subscribe = () => {
 							});
 						}}
 					/>
+					<input
+						type="text"
+						name="referCode"
+						id="referCode"
+						value={formData.referCode}
+						readOnly
+					/>
 				</div>
-				<input
-					type="hidden"
-					name="_cc"
-					value="Infomayegunroyalresort@gmail.com"
-				/>
+				<input type="hidden" name="_cc" value="Infomayegunsresort@gmail.com" />
 				<input
 					type="hidden"
 					name="_next"

@@ -10,7 +10,7 @@ const LegalPopup = () => {
 	useEffect(() => {
 		//@ts-ignore
 		localStorage.getItem('popUpClosed')
-			? setShowModal(false)
+			? setShowModal(true)
 			: setShowModal(true);
 	}, [pathname]);
 	return showModal ? (

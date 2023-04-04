@@ -40,11 +40,7 @@ const Conatct = () => {
 				action="https://formsubmit.co/toyibe25@gmail.com"
 				method="POST"
 			>
-				<input
-					type="hidden"
-					name="_cc"
-					value="Infomayegunroyalresort@gmail.com"
-				/>
+				<input type="hidden" name="_cc" value="Infomayegunsresort@gmail.com" />
 				<input
 					type="hidden"
 					name="_next"

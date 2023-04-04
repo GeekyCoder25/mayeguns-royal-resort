@@ -255,7 +255,7 @@ export const policy = [
 			'Data Privacy Officer',
 			'RWFQ+95 120101, Ijebu Ode, Ogun State',
 			'Ijebu-Ode 120101',
-			'E:  Infomayegunroyalresort@gmail.com',
+			'E:  Infomayegunsresort@gmail.com',
 			'Effective Date of Privacy Policy:  1st of April 2023',
 			'Governing Laws & Jurisdiction - The user and the Company agree that all matters relating to and/or any disputes arising out of the user’s access to, or use of the Mayegun Royal Resorts Site shall be governed by and interpreted and construed and enforced exclusively in accordance with the substantive domestic laws of the Republic of Singapore, without regard to the conflicts of law principles thereof',
 		],
@@ -297,3 +297,5 @@ export const policy = [
 		],
 	},
 ];
+
+export const referCodeLength = 6;

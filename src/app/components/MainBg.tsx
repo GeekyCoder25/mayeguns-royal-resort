@@ -8,7 +8,7 @@ const MainBg = ({modal, title, content}: any) => {
 	const [imageIndex, setImageIndex] = useState(0);
 	const [formData] = useState(homeModalValues);
 	const [checkArray, setcheckArray] = useState<string[]>([]);
-	const [ErroMesaage, setErroMesaage] = useState(false);
+	const [ErrorMesaage, setErrorMesaage] = useState(false);
 	useEffect(() => {
 		//@ts-ignore
 		const selectedImage = document.querySelectorAll(
@@ -38,6 +38,7 @@ const MainBg = ({modal, title, content}: any) => {
 	};
 
 	const whatsappNo = '+2349043999871';
+	const guestsNumer = Number(homeModalValues[2].value);
 
 	return (
 		<section
@@ -67,7 +68,7 @@ const MainBg = ({modal, title, content}: any) => {
 										item.title === 'Guests' ? item.value : undefined
 									}
 									onChange={e => {
-										setErroMesaage(false);
+										setErrorMesaage(false);
 										item.value = e.target.value.split('-').reverse().join('-');
 									}}
 									onKeyUp={e => {
@@ -79,7 +80,7 @@ const MainBg = ({modal, title, content}: any) => {
 											);
 									}}
 									onBlur={e => {
-										setErroMesaage(false);
+										setErrorMesaage(false);
 										item.title === 'Guests' &&
 											//@ts-ignore
 											e.target.parentElement.firstChild.classList.remove(
@@ -108,15 +109,20 @@ const MainBg = ({modal, title, content}: any) => {
 							title="Reserve"
 							height={80}
 							onClick={() => {
+								console.log(guestsNumer);
 								checkArray.length >= 3
 									? //@ts-ignore
 									  window.open(
-											`https://wa.me/${whatsappNo}?text=Hi%2C%20I'm%20interested%20in%20making%20payment%20for%20reservation%20between%20${homeModalValues[0].value}%20to%20${homeModalValues[1].value}%20for%20${homeModalValues[2].value}%20guests`
+											`https://wa.me/${whatsappNo}?text=Hi%2C%20I'm%20interested%20in%20making%20payment%20for%20reservation%20between%20${
+												homeModalValues[0].value
+											}%20to%20${homeModalValues[1].value}%20for%20${
+												homeModalValues[2].value
+											}%20guest${guestsNumer > 1 ? 's' : ''}`
 									  )
-									: setErroMesaage(true);
+									: setErrorMesaage(true);
 							}}
 						/>
-						{ErroMesaage && (
+						{ErrorMesaage && (
 							<span className={styles.errorText}>
 								Input all required fields first
 							</span>

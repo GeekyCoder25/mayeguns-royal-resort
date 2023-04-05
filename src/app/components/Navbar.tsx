@@ -50,6 +50,7 @@ const Navbar = ({metadata}: Metadata) => {
 			e.preventDefault();
 			// @ts-ignore
 			document.querySelector('#about').scrollIntoView({behavior: 'smooth'});
+			setShowSideBar(false);
 		}
 	};
 	return (

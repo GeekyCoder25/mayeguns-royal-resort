@@ -50,7 +50,7 @@ export const gridData = [
 		title: 'State of the art Health Facilities',
 		content:
 			'With our world class experts both in health and social services, a secured, refreshingness, rejuvenated wellness and fitness geared to maximum productivity is guaranteed.',
-		aos: 'fade-right',
+		aos: 'fade-down',
 	},
 	{
 		id: 4,
@@ -63,20 +63,20 @@ export const gridData = [
 		title: 'Standard Swimming Pool',
 		content:
 			'Our swimming pool is standard with constant and consistent treatment. Enjoy life here.',
-		aos: 'fade-left',
+		aos: 'fade-up-right',
 	},
 	{
 		id: 6,
 		title: 'Fitness and wellness Gym facilities',
 		content:
 			'Our fitness and wellness gym facilities are classic with state of the art equipments',
-		aos: 'fade-right',
+		aos: 'fade-down-left',
 	},
 	{
 		id: 7,
 		title: 'Casino',
 		content: 'Wow… A redefined fun!!!',
-		aos: 'fade-up',
+		aos: 'fade-up-left',
 	},
 ];
 
@@ -297,3 +297,5 @@ export const policy = [
 		],
 	},
 ];
+
+export const whatsappNo = '+2349043999871';

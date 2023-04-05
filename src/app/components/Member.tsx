@@ -39,7 +39,7 @@ export const MembershipLevelCompnent = ({level}: any) => {
 	const navigation = useRouter();
 	useEffect(() => {
 		pathname === '/become-a-member' && setShowMore(true);
-	}, []);
+	}, [pathname]);
 	return (
 		<div>
 			<div>

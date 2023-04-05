@@ -1,8 +1,9 @@
 'use client';
 import styles from '../styles/Gallery.module.scss';
 import MainBg from '../components/MainBg';
-import {useState} from 'react';
-
+import {useState, useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const galleryHeaders = [
 	{title: 'all', images: ['grid1']},
 	{
@@ -27,11 +28,30 @@ const galleryHeaders = [
 	{title: 'gym', images: ['grid7']},
 	{title: 'health care', images: ['grid3']},
 ];
+const aosArray = [
+	'up',
+	'right',
+	'left',
+	'down',
+	'up-right',
+	'up-left',
+	'down-right',
+	'down-left',
+];
 const Gallery = () => {
 	const [selctedTab, setSelctedTab] = useState('all');
-	for (let i = 2; i < 50; i++) {
+	for (let i = 2; i <= 50; i++) {
 		galleryHeaders[0].images?.push(`grid${i}`);
 	}
+	useEffect(() => {
+		AOS.init({
+			offset: 150,
+			delay: 0,
+			duration: 1000,
+			once: false,
+		});
+	}, []);
+
 	return (
 		<main>
 			<MainBg title=" Mayegun Royal Resort Gallery" />
@@ -52,7 +72,10 @@ const Gallery = () => {
 						item =>
 							item.title === selctedTab &&
 							item.images?.map(image => (
-								<div key={image}>
+								<div
+									key={image}
+									data-aos={`fade-${aosArray[Math.floor(Math.random() * 8)]}`}
+								>
 									<img src={`/images/pic/${image}.jpg`} alt="" />
 								</div>
 							))

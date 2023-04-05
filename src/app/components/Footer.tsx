@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Footer.module.scss';
 import Link from 'next/link';
 import {usePathname, useRouter} from 'next/navigation';
+import {whatsappNo} from '../utils/dataStorage';
 
 const Footer = () => {
 	const pathname = usePathname();
@@ -21,7 +22,6 @@ const Footer = () => {
 			document.querySelector('#about').scrollIntoView({behavior: 'smooth'});
 		}
 	};
-	const whatsappNo = '+2349043999871';
 	return (
 		<footer className={styles.footer}>
 			<section>

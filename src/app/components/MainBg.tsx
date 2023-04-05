@@ -2,11 +2,14 @@
 'use client';
 import {useEffect, useState} from 'react';
 import styles from '../styles/page.module.scss';
-import {backgroundImagesUrl, homeModalValues} from '../utils/dataStorage';
+import {
+	backgroundImagesUrl,
+	homeModalValues,
+	whatsappNo,
+} from '../utils/dataStorage';
 import Button from './Button';
 const MainBg = ({modal, title, content}: any) => {
 	const [imageIndex, setImageIndex] = useState(0);
-	const [formData] = useState(homeModalValues);
 	const [checkArray, setcheckArray] = useState<string[]>([]);
 	const [ErrorMesaage, setErrorMesaage] = useState(false);
 	useEffect(() => {
@@ -37,7 +40,6 @@ const MainBg = ({modal, title, content}: any) => {
 		e.target.parentElement.firstChild.focus();
 	};
 
-	const whatsappNo = '+2349043999871';
 	const guestsNumer = Number(homeModalValues[2].value);
 
 	return (

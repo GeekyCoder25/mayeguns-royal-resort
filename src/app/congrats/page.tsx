@@ -1,8 +1,8 @@
 'use client';
 import Button from '../components/Button';
+import {whatsappNo} from '../utils/dataStorage';
 
 const Congrats = () => {
-	const whatsappNo = '+2349043999871';
 	return (
 		<div className="congrats max-page-width">
 			<h1>CONGRATULATIONS!!!</h1>

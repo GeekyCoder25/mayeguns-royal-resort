@@ -1,7 +1,7 @@
 import React from 'react';
+import {whatsappNo} from '../utils/dataStorage';
 
 const Reserve = () => {
-	const whatsappNo = '+2349043999871';
 	return (
 		<section className="reserve">
 			<div></div>

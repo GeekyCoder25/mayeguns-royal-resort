@@ -157,6 +157,7 @@ header {
 	text-align: center;
 	animation: popup 2s ease-in-out 0s forwards;
 	transform: translateY(500px);
+	z-index: 2;
 }
 @keyframes popup {
 	from {

@@ -82,7 +82,7 @@ export const gridData = [
 
 export const membershipLevel = [
 	{
-		title: 'platinum',
+		title: 'Platinum',
 		price: '30million',
 		range: '7 days in a month',
 		content: [
@@ -97,8 +97,8 @@ export const membershipLevel = [
 		],
 	},
 	{
-		title: 'diamond',
-		price: '20million',
+		title: 'Diamond',
+		price: '25million',
 		range: '5 days in a month',
 		content: [
 			'Access to all health and other state of arts facilities',
@@ -111,7 +111,7 @@ export const membershipLevel = [
 		],
 	},
 	{
-		title: 'silver',
+		title: 'Silver',
 		price: '7.5million',
 		range: 'Per year',
 		content: [

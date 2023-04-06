@@ -40,7 +40,7 @@ const MainBg = ({modal, title, content}: any) => {
 		e.target.parentElement.firstChild.focus();
 	};
 
-	const guestsNumer = Number(homeModalValues[2].value);
+	const guestsNumber = Number(homeModalValues[2].value);
 
 	return (
 		<section
@@ -118,7 +118,7 @@ const MainBg = ({modal, title, content}: any) => {
 												homeModalValues[0].value
 											}%20to%20${homeModalValues[1].value}%20for%20${
 												homeModalValues[2].value
-											}%20guest${guestsNumer > 1 ? 's' : ''}`
+											}%20guest${guestsNumber > 1 ? 's' : ''}`
 									  )
 									: setErrorMesaage(true);
 							}}

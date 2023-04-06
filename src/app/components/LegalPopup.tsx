@@ -9,8 +9,8 @@ const LegalPopup = () => {
 	const navigation = useRouter();
 	useEffect(() => {
 		//@ts-ignore
-		localStorage.getItem('popUpClosed')
-			? setShowModal(true)
+		sessionStorage.getItem('popUpClosed')
+			? setShowModal(false)
 			: setShowModal(true);
 	}, [pathname]);
 	return showModal ? (
@@ -27,12 +27,8 @@ const LegalPopup = () => {
 				className="fas fa-xmark"
 				onClick={() => {
 					//@ts-ignore
-					localStorage.setItem('popUpClosed', true);
+					sessionStorage.setItem('popUpClosed', true);
 					setShowModal(false);
-					setTimeout(() => {
-						//@ts-ignore
-						localStorage.removeItem('popUpClosed');
-					}, 18000000);
 				}}
 			></i>
 		</aside>

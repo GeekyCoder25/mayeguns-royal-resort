@@ -40,6 +40,10 @@ export const MembershipLevelCompnent = ({level}: any) => {
 	useEffect(() => {
 		pathname === '/become-a-member' && setShowMore(true);
 	}, [pathname]);
+	const handleClick = (e: any) => {
+		navigation.push('/subscribe');
+		sessionStorage.setItem('levelSelected', e.title);
+	};
 	return (
 		<div>
 			<div>
@@ -58,9 +62,7 @@ export const MembershipLevelCompnent = ({level}: any) => {
 					)}
 				</ul>
 			</div>
-			<button onClick={() => navigation.push('/subscribe')}>
-				Subscribe now
-			</button>
+			<button onClick={() => handleClick(level)}>Subscribe now</button>
 		</div>
 	);
 };

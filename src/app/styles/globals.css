@@ -38,6 +38,11 @@ header {
 .navBg {
 	background: #fafafa;
 }
+header h1 {
+	width: 1px;
+	height: 1px;
+	visibility: hidden;
+}
 .nav {
 	justify-content: center;
 	align-items: center;
@@ -186,7 +191,7 @@ header {
 	margin: 100px auto;
 }
 
-.congrats h1 {
+.congrats h2 {
 	font-family: 'objectivity-bold';
 	color: #00a790;
 }
@@ -206,7 +211,7 @@ header {
 	font-size: 2rem;
 	min-height: 40vh;
 }
-.error h1 {
+.error h2 {
 	font-family: 'objectivity-bold';
 	font-size: 5rem;
 }

@@ -1,7 +1,7 @@
 'use client';
 import styles from '../styles/Subscribe.module.scss';
 import Button from '../components/Button';
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 const Subscribe = () => {
 	const [formData, setformData] = useState({
@@ -27,6 +27,18 @@ const Subscribe = () => {
 		.slice(0, referCodeLength)
 		.toUpperCase();
 	const levelRef = useRef<any>('');
+	useEffect(() => {
+		const result = sessionStorage.getItem('levelSelected');
+		result &&
+			setformData(prev => {
+				return {
+					...prev,
+					LEVEL: result,
+					REFER_CODE: referCode,
+				};
+			});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	const handleLevelClick = (e: any) => {
 		//@ts-ignore
 		const levelButton = document.querySelectorAll(
@@ -44,7 +56,9 @@ const Subscribe = () => {
 		});
 	};
 	const handleSubmit = () => {
-		console.log(formData);
+		!Object.values(formData).includes('') &&
+			localStorage.removeItem('levelSelected');
+		// console.log(formData);
 		//@ts-ignore
 		const levelButton = document.querySelectorAll(
 			`.${styles.subscribe} > div > span`

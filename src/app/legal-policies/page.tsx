@@ -6,7 +6,7 @@ import {policy} from '../utils/dataStorage';
 const Privacy = () => {
 	useEffect(() => {
 		//@ts-ignore
-		localStorage.setItem('popUpClosed', true);
+		sessionStorage.setItem('popUpClosed', true);
 	}, []);
 	return (
 		<section className={styles.Terms}>

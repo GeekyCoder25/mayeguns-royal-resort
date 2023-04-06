@@ -57,6 +57,7 @@ const Navbar = ({metadata}: Metadata) => {
 		<header
 			className={`${whiteBgNav.includes(pathname) ? 'navBg' : undefined}`}
 		>
+			<h1>Mayegun Royal Resort</h1>
 			<nav className="max-page-width nav">
 				<Link href={'/'}>
 					<img src={'/images/logo.svg'} alt={metadata.title} />

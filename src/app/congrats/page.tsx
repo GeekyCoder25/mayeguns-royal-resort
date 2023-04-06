@@ -5,7 +5,7 @@ import {whatsappNo} from '../utils/dataStorage';
 const Congrats = () => {
 	return (
 		<div className="congrats max-page-width">
-			<h1>CONGRATULATIONS!!!</h1>
+			<h2>CONGRATULATIONS!!!</h2>
 			<p>
 				Thank you for subscribing to Mayegun Royal Resorts, kindly proceed to
 				our whatsapp platform to make payment via one of our representative

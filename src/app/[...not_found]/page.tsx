@@ -1,7 +1,7 @@
 const notFound = () => {
 	return (
 		<main className="max-page-width error">
-			<h1>404</h1>
+			<h2>404</h2>
 			<p>Page Not Found</p>
 		</main>
 	);

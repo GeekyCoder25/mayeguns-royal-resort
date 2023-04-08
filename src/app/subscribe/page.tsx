@@ -54,11 +54,12 @@ const Subscribe = () => {
 				REFER_CODE: referCode,
 			};
 		});
+		sessionStorage.removeItem('levelSelected');
 	};
 	const handleSubmit = () => {
-		!Object.values(formData).includes('') &&
-			localStorage.removeItem('levelSelected');
 		// console.log(formData);
+		!Object.values(formData).includes('') &&
+			sessionStorage.removeItem('levelSelected');
 		//@ts-ignore
 		const levelButton = document.querySelectorAll(
 			`.${styles.subscribe} > div > span`

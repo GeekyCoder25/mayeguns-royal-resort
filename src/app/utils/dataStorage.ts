@@ -116,9 +116,9 @@ export const membershipLevel = [
 		range: 'Per year',
 		content: [
 			'Access to swimming pool areas ONLY',
-			'Under this category you are an esteemed and exclusive member, access to a private lounge in the resort',
-			'5 days accessibility to our prestigious and elegant room, maximum stay is 5 days only monthly',
-			'Free food and drinks as it pleases, free pick up from a distance of 120km maximum e.g. from Lagos or Ibadan, same as drop off',
+			// 'Under this category you are an esteemed and exclusive member, access to a private lounge in the resort',
+			// '5 days accessibility to our prestigious and elegant room, maximum stay is 5 days only monthly',
+			// 'Free food and drinks as it pleases, free pick up from a distance of 120km maximum e.g. from Lagos or Ibadan, same as drop off',
 		],
 	},
 ];

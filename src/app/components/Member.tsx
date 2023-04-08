@@ -57,7 +57,7 @@ export const MembershipLevelCompnent = ({level}: any) => {
 						))}
 					{!showMore && (
 						<button onClick={() => setShowMore(true)} className={styles.more}>
-							More...
+							{level.content.length > 4 && 'More...'}
 						</button>
 					)}
 				</ul>

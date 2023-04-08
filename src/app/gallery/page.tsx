@@ -7,25 +7,17 @@ import 'aos/dist/aos.css';
 const galleryHeaders = [
 	{title: 'all', images: ['grid1']},
 	{
-		title: 'hotel',
-		images: [
-			'grid5',
-			'grid9',
-			'grid13',
-			'grid15',
-			'grid16',
-			'grid22',
-			'grid29',
-		],
+		title: 'resort',
+		images: ['grid5', 'grid9', 'grid13', 'grid15', 'grid16', 'grid29'],
 	},
 	{
 		title: 'bedrooms',
-		images: ['grid40', 'grid42', 'grid43', 'grid44', 'grid45', 'grid50'],
+		images: ['grid40', 'grid41', 'grid42', 'grid43', 'grid44', 'grid45'],
 	},
 	{title: 'rooftop', images: ['grid5', 'grid9', 'grid13', 'grid22']},
-	{title: 'restaurant', images: ['grid41']},
-	{title: 'spa', images: ['grid4']},
-	{title: 'gym', images: ['grid7']},
+	{title: 'reception', images: ['grid30', 'grid32']},
+	{title: 'spa', images: ['grid4', 'grid26']},
+	{title: 'gym', images: ['grid16']},
 	{title: 'health care', images: ['grid3']},
 ];
 const aosArray = [
@@ -40,8 +32,9 @@ const aosArray = [
 ];
 const Gallery = () => {
 	const [selctedTab, setSelctedTab] = useState('all');
-	for (let i = 2; i <= 50; i++) {
-		galleryHeaders[0].images?.push(`grid${i}`);
+	for (let i = 2; i <= 45; i++) {
+		!galleryHeaders[0].images.includes(`grid${i}`) &&
+			galleryHeaders[0].images?.push(`grid${i}`);
 	}
 	useEffect(() => {
 		AOS.init({

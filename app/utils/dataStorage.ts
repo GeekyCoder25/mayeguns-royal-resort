@@ -189,7 +189,7 @@ export const policy = [
 		title: 'PRIVACY POLICY',
 		content: [
 			'At Mayegun Royal Resorts, we respect your right to privacy and are committed to handling your personal information with the utmost discretion',
-			'This notice describes the general privacy policy of Mayegun Royal Resorts (hereinafter referred to as “the Company”) and its related and affiliated companies as it applies to personal data collected, used, disclosed, stored and/or processed by us in Singapore. We encourage you to review this page periodically to understand our policy regarding the collection and use of your personal data',
+			'This notice describes the general privacy policy of Mayegun Royal Resorts (hereinafter referred to as “the Company”) and its related and affiliated companies as it applies to personal data collected, used, disclosed, stored and/or processed by us in Nigeria. We encourage you to review this page periodically to understand our policy regarding the collection and use of your personal data',
 			'The Company makes every attempt to ensure that all our business practices that involve the use of your information are compliant with privacy regulations in the countries where we operate and, at all times only collect and process your personal information in accordance with applicable data protection laws. Unless you opt-out in accordance with the procedure set forth in this Policy, we do and will continue to share personal data that we collect from you and our affiliates, partners and subsidiaries as permitted under the Personal Data Protection Act 2012 (“PDPA”)',
 			'By visiting www.mayegunroyalresort.com  (Mayegun Royal Resorts Site), you are accepting the practices described in this notice',
 		],
@@ -214,7 +214,7 @@ export const policy = [
 		title: 'SHARING OF INFORMATION',
 		content: [
 			'We may transfer your information outside of the country in which it was collected (including to countries where we have hotels under development or operation) for various reasons, including the purpose of entering into or fulfilling a contract with you, reserving a room, processing on-line purchase transactions, replying to or taking actions in response to your enquiries or requests, for processing by us or on behalf of the hotels properties managed by us, for enhancing personalisation of services provided to you, for communicating news and promotions to you relating to Mayegun Royal Resorts products and services and other products and services we think may be of interest to you, and for statistical and analysis purposes. Such transfer may be to a country which may not provide the same level of privacy protection as that provided by the country in which the information was collected',
-			'In situations where we transfer your personal data to countries outside Singapore, we will take steps to ensure that appropriate levels of protection necessary to maintain the security and integrity of your personal data are in place.',
+			'In situations where we transfer your personal data to countries outside Nigeria, we will take steps to ensure that appropriate levels of protection necessary to maintain the security and integrity of your personal data are in place.',
 			'Information is shared between certified data privacy personnel at individual hotels in certain circumstances, particularly where health or safety concerns have arisen in the past. Preference information may also be shared to enhance your hotel experience. Further, if there are acts in unlawful manner in regards to payment obligations, this information may be shared among accounting personnel at Mayegun Royal Resortsproperties',
 			'We may also disclose your information to third parties in connection with the sale, transfer or disposal of our business, provided that they continue to use your information substantially in accordance with the terms of this Privacy Policy',
 			'We may share anonymised aggregate data among other affiliates, partners and subsidiaries, and with third parties, including advertisers, investors and partners. Aggregate and anonymous information does not contain any personal data, and accordingly its use and disclosure is not subject to the terms of this Privacy Policy',
@@ -257,7 +257,7 @@ export const policy = [
 			'Ijebu-Ode 120101',
 			'E:  Infomayegunsresort@gmail.com',
 			'Effective Date of Privacy Policy:  1st of April 2023',
-			'Governing Laws & Jurisdiction - The user and the Company agree that all matters relating to and/or any disputes arising out of the user’s access to, or use of the Mayegun Royal Resorts Site shall be governed by and interpreted and construed and enforced exclusively in accordance with the substantive domestic laws of the Republic of Singapore, without regard to the conflicts of law principles thereof',
+			'Governing Laws & Jurisdiction - The user and the Company agree that all matters relating to and/or any disputes arising out of the user’s access to, or use of the Mayegun Royal Resorts Site shall be governed by and interpreted and construed and enforced exclusively in accordance with the substantive domestic laws of the Republic of Nigeria, without regard to the conflicts of law principles thereof',
 		],
 	},
 	{

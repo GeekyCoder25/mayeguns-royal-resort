@@ -101,7 +101,7 @@ const Gallery = () => {
 
 export default Gallery;
 
-export const SpaMenu = ({spa}: {spa: any}) => {
+const SpaMenu = ({spa}: {spa: any}) => {
 	const [expanded, setExpanded] = useState(false);
 
 	useEffect(() => {

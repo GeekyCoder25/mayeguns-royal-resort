@@ -36,7 +36,7 @@ export default function Home() {
 				</div>
 			</section>
 			<section className={styles.about} id="about">
-				<Video styles={styles} />
+				<Video styles={styles} source="video.mp4" />
 				<div>
 					<h2>About Mayegun Royal Resort</h2>
 					<p>

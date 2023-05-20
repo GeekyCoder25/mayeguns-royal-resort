@@ -298,4 +298,174 @@ export const policy = [
 	},
 ];
 
-export const whatsappNo = '+2349043999871';
+export const spaMenu = [
+	{
+		title: 'MASSAGE THERAPY',
+		subTitle: [
+			{
+				title: 'MRR Spa VIP Luxury Balinese massage',
+				content:
+					'Pamper yourself with our Balinese massage which uses a combination of gentle stretches and acupressure to stimulate the flow of blood, oxygen and energy around your body and bring a sense of wellbeing, calm and relaxation.',
+				duration: '1hr',
+			},
+			{
+				title: 'Swedish body massage with hot stones',
+				content:
+					'Prepare yourself to be pampered with our most exclusive massage treatment signifying stimulation of healing and energizing properties, a simple and effective massage that will offer you a soothing and relaxing experience while reducing your stress, muscle tension and joint stiffness',
+				duration: '1hr, 30mins',
+			},
+			{
+				title: 'MRR Spa Luxury Deep tissue massage with hot stones',
+				content:
+					'This massage is a further extension of Swedish massage but involves application of slow strokes and focused deeper pressure which works as healing agent in chronic suffering conditions. The weight and warmth of the stones further penetrates muscle tissue inducing deep relaxation and total wellness',
+				duration: '1hr, 30mins',
+			},
+			{
+				title: ' Four Hands Aromatherapy MASSAGE',
+				content:
+					'Unifying the essentials of gentle massage and application of aromatic oils, this reenergizing massage will refresh your senses and rebalance your health.',
+				duration: '1hr',
+			},
+			{
+				title: 'Lymphatic Drainage MASSAGE',
+				content:
+					'Accelerate healing and reduce inflammation pain while boosting your immunity. Manual lymph drainage is applied with rhythmic motion in the direction of the lymphatic flow which enhances the elimination of toxins.',
+				duration: '1hr',
+			},
+			{
+				title: 'Foot Reflexology',
+				content:
+					'A gentle massage and accurate pressure on reflex points on your soles that will stimulate healing effect throughout your body',
+				duration: '30mins',
+			},
+			{
+				title: 'Indian head massage',
+				content:
+					'Say goodbye to muscle tension and pain in the head, neck and shoulders and get recharged to enjoy your lifestyle without any restraints',
+				duration: '30mins',
+			},
+		],
+		id: 1,
+	},
+	{
+		title: 'BODY TREATMENT THERAPY',
+		subTitle: [
+			{
+				title: 'Body polishing',
+				content:
+					' Relax, rejuvenate and reemerge with a beautiful natural glow and butter soft skin. This is a body treatment that you are sure to enjoy time and time again.',
+				duration: '1hr',
+			},
+			{
+				title: ' Hammam bath',
+				content:
+					'Deep exfoliation with kessa gloves then wrapped in our soothing clay to enhance color tone, hydrate, detoxify and nourish the body.',
+				duration: '1hr, 30mins',
+			},
+			{
+				title: 'Revitalizing body exfoliation',
+				content:
+					'Body scrubs cleanses and softens the skin, lifts up surface dryness and draw out impurities while hydrating and giving that much needed glow.',
+				duration: '1hr',
+			},
+			{
+				title: 'Infrared Sauna bath',
+				content:
+					'Detoxify, increase metabolism, increase blood circulation, improve cardiovascular function, improve immune function soothe sore muscles, relax',
+				duration: '30mins',
+			},
+			{
+				title: 'Madero therapy',
+				content:
+					'A holistic massage technique that uses anatomically designed wooden tools which allows highly targeted pressure to be applied to specific areas of the body thereby improving the body’s size and proportions while also improving overall health.',
+				duration: '1hr, 30mins',
+			},
+			{
+				title:
+					'Weight loss massage with Ultrasonic Cavitation machine and G5 therapy',
+				content:
+					'A non-invasive body contouring treatment that uses low frequency ultrasound waves to break down fat cells in the body added with g5 machine for that perfect body toning.',
+				duration: '1hr 30mins',
+			},
+			{
+				title: 'Waxing',
+				content:
+					'Remove unwanted hair from any area of your body and enjoy a smooth moisturized skin',
+				duration: 'Depends on area to be waxed',
+			},
+		],
+		id: 2,
+	},
+	{
+		title: 'FACIAL THERAPY',
+		subTitle: [
+			{
+				title: 'Hydra Facials',
+				content:
+					'A powerful, non-invasive skin resurfacing treatment which combines cleansing, exfoliation, hydration and antioxidant protection while delivering moisturizing serums into the skin.',
+				duration: '1hr 30mins',
+			},
+			{
+				title: 'Acne treatment facials',
+				content:
+					'Perfect for problem skin, this no-holds barred facial treatment combines a thorough microdermabrasion session with pore cleansing extractions plus calming mask and finish up with LED light therapy to leave skin looking both clear and younger',
+				duration: '1hr 30mins',
+			},
+			{
+				title: ' Dermaplaning facials',
+				content:
+					'This facial is on a mission to achieve complexion perfection. Helps reduce skin imperfections and acne scars and aided with LED light therapy to achieve toned, firm and radiant skin',
+				duration: '1hr',
+			},
+			{
+				title: 'Micro needling facials',
+				content:
+					' A minimally invasive cosmetic procedure that is used to treat skin concerns by stimulating collagen production.',
+				duration: '1hr',
+			},
+			{
+				title: 'Deep cleansing facials',
+				content:
+					'A multi-step skin treatment that includes deep cleansing, exfoliation, special facial masks and a revitalizing facial massage all aimed at getting rid of unwanted buildup of oil and all skin debris',
+				duration: '1hr',
+			},
+			{
+				title: 'Gentlemen’s facials',
+				content:
+					'An aromatic, deep cleansing and hydrating treatment designed specifically to address male skincare needs and improve appearance and elasticity.',
+				duration: '1hr',
+			},
+			{
+				title: 'Teeth whitening',
+				content: 'Lighten the existing color of your teeth by several shades',
+				duration: '1hr 30mins',
+			},
+		],
+		id: 3,
+	},
+	{
+		title: 'HAND AND FOOT PAMPERING TREATMENT',
+		subTitle: [
+			{
+				title:
+					'Royal pedicure/manicure with paraffin wax moisturizing treatment',
+				duration: '1hr',
+			},
+			{
+				title: 'Luxury pedi/mani with hydrating and soothing gold mask',
+				duration: '1hr',
+			},
+			{
+				title: 'Luxury jelly foot treatment',
+				duration: '1hr',
+			},
+			{
+				title: 'Dry pedi/mani with hand and foot reflexology',
+				duration: '1hr',
+			},
+		],
+		id: 4,
+	},
+];
+
+export const whatsappNo = '+2347047536599';

@@ -1,7 +1,7 @@
 'use client';
 import {useRef, useState} from 'react';
 
-const Video = ({styles}: any) => {
+const Video = ({styles, source}: any) => {
 	const [playButton, setPlayButton] = useState(true);
 	const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -26,7 +26,7 @@ const Video = ({styles}: any) => {
 				onPlay={() => setPlayButton(false)}
 				muted
 			>
-				<source src="/vid/video.mp4" type="video/mp4" />
+				<source src={`/vid/${source}`} type="video/mp4" />
 			</video>
 		</div>
 	);

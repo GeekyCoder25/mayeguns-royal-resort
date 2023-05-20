@@ -4,6 +4,8 @@ import MainBg from '../components/MainBg';
 import {useState, useEffect} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Video from '../components/Video';
+import {spaMenu} from '../utils/dataStorage';
 const galleryHeaders = [
 	{title: 'all', images: ['grid1']},
 	{
@@ -30,6 +32,12 @@ const aosArray = [
 	'down-right',
 	'down-left',
 ];
+
+interface subMenuType {
+	title: string;
+	content?: string;
+	duration: string;
+}
 const Gallery = () => {
 	const [selctedTab, setSelctedTab] = useState('all');
 	for (let i = 2; i <= 45; i++) {
@@ -60,6 +68,18 @@ const Gallery = () => {
 						</h3>
 					))}
 				</div>
+
+				{selctedTab === 'spa' && (
+					<div className={styles.spaMenu}>
+						<h2>SPA MENU</h2>
+						{spaMenu.map(spa => (
+							<SpaMenu key={spa.id} spa={spa} />
+						))}
+					</div>
+				)}
+				<div className={styles.videoContainer}>
+					<Video styles={styles} source="video2.mp4" />
+				</div>
 				<section>
 					{galleryHeaders.map(
 						item =>
@@ -80,3 +100,35 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+export const SpaMenu = ({spa}: {spa: any}) => {
+	const [expanded, setExpanded] = useState(false);
+
+	useEffect(() => {
+		spa.id === 1 && setExpanded(true);
+	}, [spa.id]);
+	return (
+		<div>
+			<span className={styles.spaHeader}>
+				<i
+					className={`fas ${expanded ? 'fa-minus-circle' : 'fa-plus-circle'}`}
+					onClick={() => setExpanded(prev => !prev)}
+				></i>
+				<h4 key={spa.title}>{spa.title}</h4>
+			</span>
+			{spa.subTitle.map(
+				(sub: subMenuType) =>
+					expanded && (
+						<div key={sub.title}>
+							<h5 key={sub.title}>{sub.title}</h5>
+							<p>{sub.content}</p>
+							<span>
+								Duration:
+								<i> {sub.duration}</i>
+							</span>
+						</div>
+					)
+			)}
+		</div>
+	);
+};

@@ -16,6 +16,76 @@
 		color: #00a790;
 	}
 
+	.spaMenu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 50px;
+		gap: 30px;
+		.spaHeader {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			i {
+				cursor: pointer;
+				font-size: 2rem;
+				color: #00a790;
+			}
+		}
+		> div {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			gap: 20px;
+			div {
+				display: flex;
+				flex-direction: column;
+				padding-left: 40px;
+				gap: 10px;
+				h5 {
+					font-size: 1.2rem;
+					color: #00a790;
+				}
+				p {
+					line-height: 1.3rem;
+				}
+			}
+		}
+	}
+
+	.videoContainer {
+		width: 100%;
+		display: flex;
+		margin-top: 50px;
+		justify-content: center;
+		align-items: center;
+		.video {
+			position: relative;
+			width: 640px;
+			height: 100%;
+		}
+		.pause {
+			background-color: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			padding: 30px;
+
+			img {
+				width: 200px;
+				height: 200px;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+
 	> section {
 		margin-top: 80px;
 		display: flex;
@@ -39,5 +109,18 @@
 @media (max-width: 900px) {
 	.galleryGridConatiner > section div {
 		height: 400px;
+	}
+	.galleryGridConatiner .spaMenu div div {
+		padding-left: 1%;
+	}
+	.video {
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		video {
+			width: 100%;
+			height: auto;
+		}
 	}
 }

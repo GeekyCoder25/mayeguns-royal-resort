@@ -37,10 +37,9 @@ const Conatct = () => {
 			</section>
 			<form
 				className={styles.form}
-				action="https://formsubmit.co/toyibe25@gmail.com"
+				action="https://formsubmit.co/Infomayegunsresort@gmail.com"
 				method="POST"
 			>
-				<input type="hidden" name="_cc" value="Infomayegunsresort@gmail.com" />
 				<input
 					type="hidden"
 					name="_next"

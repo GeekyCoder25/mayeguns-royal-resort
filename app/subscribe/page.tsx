@@ -117,7 +117,10 @@ const Subscribe = () => {
 					Silver
 				</span>
 			</div>
-			<form action="https://formsubmit.co/toyibe25@gmail.com" method="POST">
+			<form
+				action="https://formsubmit.co/Infomayegunsresort@gmail.com"
+				method="POST"
+			>
 				<div>
 					<input
 						type="text"
@@ -304,7 +307,6 @@ const Subscribe = () => {
 						readOnly
 					/>
 				</div>
-				<input type="hidden" name="_cc" value="Infomayegunsresort@gmail.com" />
 				<input
 					type="hidden"
 					name="_next"

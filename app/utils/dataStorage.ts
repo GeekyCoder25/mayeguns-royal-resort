@@ -34,7 +34,7 @@ export const exclusiveAdvantages = [
 export const gridData = [
 	{
 		id: 1,
-		title: 'World class bartender',
+		title: 'World class bar',
 		content:
 			'With Our World class bartenders, come enjoy genuine well prepared, tasty and quality cuisines',
 		aos: 'fade-right',

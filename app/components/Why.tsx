@@ -23,9 +23,9 @@ const Why = () => {
 			<div className={styles.whyHeader}>
 				<CustomHeader
 					title="Why Choose Us"
-					content="Our luxurious and innovative solutions to relaxation is second to
-						none, suitable for all our esteemed customer’s needs, we are also
-						tailored to suit all refined individuals and corporate bodies."
+					content="Our luxurious and innovative solutions to relaxation are second to none,
+					 suitable for all our esteemed customer needs. We are also tailored to suit all 
+					 refined individuals and corporate bodies."
 				/>
 			</div>
 			<article className={styles.gridContainer}>

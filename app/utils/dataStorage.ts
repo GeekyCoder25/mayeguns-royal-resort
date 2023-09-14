@@ -34,9 +34,9 @@ export const exclusiveAdvantages = [
 export const gridData = [
 	{
 		id: 1,
-		title: 'World class bar',
+		title: 'A classy bar',
 		content:
-			'With Our World class bartenders, come enjoy genuine well prepared, tasty and quality cuisines',
+			'Come relax with luxury liquor brands, a well-mixed cocktail by our world class bartenders',
 		aos: 'fade-right',
 	},
 	{
